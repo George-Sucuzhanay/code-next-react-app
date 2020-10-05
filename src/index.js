@@ -15,6 +15,7 @@ const decrementButton = document.getElementById('decrement');
 const updateCount = () => {
   countSpan.innerHTML = count;
 }
+
 // when the button is clicked, invoke a function that increments count
 incrementButton.onclick = () => {
   count++
