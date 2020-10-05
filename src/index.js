@@ -84,3 +84,36 @@ const scream = (fn,str) => {
 
 }
 scream(identity), 'asdf';
+
+const getLie = () => {
+  return 'this is boring no cap';
+
+const getTruth = () => {
+  return 'this is cool no cap';
+
+}
+};
+const scream = (getMessage) => {
+  console.log(getMessage().toUpperCase());
+}
+
+scream(getLie);
+scream(getTruth);
+
+
+
+const getLie = () => 'asdfasdf';
+getLie.foo = 'hello';
+
+console.log(getLie.foo);
+/* functions csn return function */
+
+const deferredSum = (a,b) => {
+  const i = a+b;
+  return () => i + c;
+}
+const sum = derferredSum(1,2,3);
+console.log(sum());
+
+
+const 
