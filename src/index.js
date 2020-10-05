@@ -54,3 +54,33 @@ o.hello = 'goodbye';
 
 console.log(n);
 console.log(o);
+
+/* Arrays */
+
+const arr = [1, 'two', {three: 'three'}];
+const arrCopy = [...arr];
+arr[0] = "asdfasdfasdfasdf"
+console.log(arr);
+
+console.log(arr[0]);
+
+
+/* Functions are the building blocks of programming. Functions are considered like objects similar to first class ppl. :-) */
+
+function add (a,b) {
+
+}
+
+const add = (a,b) => {
+  console.log(this);
+  const sum = a + b;
+  return sum;
+}
+add();
+
+const identity  = (str) => str;
+const scream = (fn,str) => {
+  console.log(fn(sttr)).toUpperCase();
+
+}
+scream(identity), 'asdf';
