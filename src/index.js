@@ -2,12 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Counter } from './Counter';
 
+// Vanilla JS App
+
 // declare a mutable variable called `count` and initialize it to 0
 let count = 0;
 
 // get the element that has [id="count"]
 const countSpan = document.getElementById('count');
-
 
 // get the element that has [id="increment"]
 const incrementButton = document.getElementById('increment');
@@ -27,13 +28,11 @@ incrementButton.onclick = () => {
   updateCount();
 }
 
-
 decrementButton.onclick = () => {
   count--
   updateCount();
 
 }
-
 
 // updates the inner text immediately
 countSpan.innerText = 42;
@@ -42,7 +41,6 @@ countSpan.innerText = 42;
 // React App
 
 const reactAppDiv = document.getElementById('reactapp');
-
 ReactDOM.render = document.getElementById('react-app') 
 
 

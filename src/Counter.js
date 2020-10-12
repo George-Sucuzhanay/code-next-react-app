@@ -1,16 +1,41 @@
 import React, { useState } from 'react';
 
-export const Counter = () => {
-  const [count, setCount] = useState(0);
-  // const used = usedState(0);
+class Counter extends React.Component {
+  constructor(props) {
+    super(props);
 
-  const increment = () => setCount(count + 1);
-  const decrement = () =>
-  return 
-    <div>
-      <div>count:{count} </div>
+    this.state = {
+      count: 0
+    };
+
+    this.increment = this.increment.bind(this);
+  }
+
+  increment() {
+    this.setState({ 
+      ...this.state,
+      count: this.state.count + 1,
+    });
+  }
+
+  // special React lifecycle method
+  componentDidUpdate(prevProps, prevState) {
+    document.title = `count: ${this.state.count}`;
+  }
+
+  // special React lifecycle method
+  componentWillUnmount() {
+    document.title = 'no counter';
+  }
+
+  render() {
+    return (
+      <div>
+        <div>count: {count}</div>
         <div>
-          <button onClick={increment}</button>
-          <button>decrement</button>
-  };
-
+          <button onClick={this.increment}>increment</button>
+        </div>
+      </div>
+    );
+  }
+}
