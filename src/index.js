@@ -1,3 +1,7 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Counter } from './Counter';
+
 // declare a mutable variable called `count` and initialize it to 0
 let count = 0;
 
@@ -38,5 +42,7 @@ countSpan.innerText = 42;
 // React App
 
 const reactAppDiv = document.getElementById('reactapp');
+
+ReactDOM.render = document.getElementById('react-app') 
 
 

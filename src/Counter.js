@@ -1,7 +1,6 @@
 import React from 'react';
 
 export const Counter = () => {
-  const [count],setCount = useState[0];
-  return { <div>Counter </div>
+  return <div>Counter123123123 </div>
   }
 }
