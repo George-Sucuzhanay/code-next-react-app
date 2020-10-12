@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const Counter = () => {
-  return <div>Counter123123123 </div>
-  }
-}
+  const [count, setCount] = useState(0);
+  // const used = usedState(0);
+
+  const increment = () => setCount(count + 1);
+  const decrement = () =>
+  return 
+    <div>
+      <div>count:{count} </div>
+        <div>
+          <button onClick={increment}</button>
+          <button>decrement</button>
+  };
+
