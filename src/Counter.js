@@ -1,41 +1,21 @@
 import React, { useState } from 'react';
 
-class Counter extends React.Component {
-  constructor(props) {
-    super(props);
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
-    this.state = {
-      count: 0
-    };
+  const increment = () => setCount(count + 1);
 
-    this.increment = this.increment.bind(this);
-  }
+  useEffect(() => {
+   document.title = `count: ${count}`;
+   return () => { document.title = 'no counter' };
+  }, [count]);
 
-  increment() {
-    this.setState({ 
-      ...this.state,
-      count: this.state.count + 1,
-    });
-  }
-
-  // special React lifecycle method
-  componentDidUpdate(prevProps, prevState) {
-    document.title = `count: ${this.state.count}`;
-  }
-
-  // special React lifecycle method
-  componentWillUnmount() {
-    document.title = 'no counter';
-  }
-
-  render() {
-    return (
+  return (
+    <div>
+      <div>count: {count}</div>
       <div>
-        <div>count: {count}</div>
-        <div>
-          <button onClick={this.increment}>increment</button>
-        </div>
+        <button onClick={increment}>increment</button>
       </div>
-    );
-  }
+    </div>
+  )
 }
