@@ -35,3 +35,8 @@ decrementButton.onclick = () => {
 countSpan.innerText = 42;
 
 
+// React App
+
+const reactAppDiv = document.getElementById('reactapp');
+
+
